@@ -1,8 +1,11 @@
 #ifndef GLWIDGET_H
 #define GLWIDGET_H
 
+#define GL_SILENCE_DEPRECATION
+
 #include <QWidget>
 #include <QOpenGLWidget>
+//#include <QtOpenGLWidgets/QOpenGLWidget>
 
 
 class glwidget : public QOpenGLWidget
@@ -23,7 +26,7 @@ private:
     void mousePressEvent(QMouseEvent*) override;
     void mouseMoveEvent(QMouseEvent*) override;
 
-    void keyPressEvent(QKeyEvent*);
+    void keyPressEvent(QKeyEvent*) override;
 
     void draw();
 };
